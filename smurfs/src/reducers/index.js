@@ -21,3 +21,9 @@
   There is no need for 'combineReducers' in this project.
   Components can then read your store as, `state` and not `state.fooReducer`.
 */
+
+const reducer = (state, action) => {
+  return state;
+};
+
+export default reducer;
