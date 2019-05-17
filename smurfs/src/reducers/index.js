@@ -22,6 +22,10 @@
   Components can then read your store as, `state` and not `state.fooReducer`.
 */
 
+// imports
+import * as actionTypes from '../actions/index';
+
+
 const reducer = (state, action) => {
   return state;
 };
