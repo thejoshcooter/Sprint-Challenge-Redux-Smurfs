@@ -1,18 +1,28 @@
-import React from 'react';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import Form from "./Form";
 
-class Smurf extends React.Component {
+class Smurf extends Component {
     constructor() {
         super();
-        this.state = {
-
-        }
     }
 
     render() {
+        const { name, age, height, id } = this.props.smurf
         return (
-            <div>smurf</div>
-        );
+            <div>
+                <div>Name: {name}</div>
+                <div>Age: {age}</div>
+                <div>Height: {height}</div>
+            </div>
+        )
     }
+}
+
+const mapStateToProps = state => {
+    return {
+        smurfs: state.smurfs
+    };
 };
 
-export default Smurf;
+export default connect(mapStateToProps, {})(Smurf);
